@@ -65,7 +65,12 @@ class VueRouteWebpackPlugin {
         if (componentName === '') {
           componentName = item.path.replace(/[\/:?*\\\-'"]/g, '');
         }
-        importData.add(`import ${componentName} from ${this.qoute}${this.prefix}${subFilePath}${this.qoute};`.replace(/\\/g, '/'))
+        componentName = componentName || path.parse(filePath).name;
+        if (!this.loadAsync) {
+          importData.add(`import ${componentName} from ${this.qoute}${this.prefix}${subFilePath}${this.qoute};`.replace(/\\/g, '/'))
+        } else {
+          importData.add(`const ${componentName} = () => import(${this.qoute}${this.prefix}${subFilePath}${this.qoute});`.replace(/\\/g, '/'))
+        }
         item.component = componentName;
         routeData.push({ ...item });
       })

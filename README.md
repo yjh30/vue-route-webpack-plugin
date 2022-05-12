@@ -21,7 +21,7 @@
  * 
  * 如果需要额外的路由配置，可以使用对象形式的配置方式：
  * @route({
- *   path: "user/list",
+ *   path: "user/list", // path值可以为'/'
  *   name: "user-list",
  *   alias: "user",
  *   // 注意：这里 meta 字段的值只支持一层对象
@@ -200,5 +200,7 @@ new VueRouteWebpackPlugin({
   // 生成的文件中的 import 路径是否使用双引号规范，默认使用
   // 注意：生成的路由文件中的 path 的引号是原封不动使用用户的
   doubleQoute: true,
+  // 组件是否异步加载
+  loadAsync: false,
 })
 ```

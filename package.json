@@ -1,9 +1,9 @@
 {
-  "name": "@xiyun/vue-route-webpack-plugin",
-  "version": "2.1.0",
+  "name": "vue-route-webpack-plugin",
+  "version": "0.0.1",
   "main": "./src/index.js",
-  "repository": "git@github.com:xiyun-international/vue-route-webpack-plugin.git",
-  "author": "zhaoliang <kybetter@163.com>",
+  "repository": "git@github.com:yjh30/vue-route-webpack-plugin.git",
+  "author": "yangjunhua <yjh15167143670@163.com>",
   "license": "MIT",
   "dependencies": {
     "chokidar": "^3.0.2",
