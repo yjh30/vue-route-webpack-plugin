@@ -26,6 +26,7 @@ class VueRouteWebpackPlugin {
     // 生成的文件中是否使用双引号规范，默认使用
     this.doubleQoute = options.doubleQoute === undefined ? true : !!options.doubleQoute;
     this.qoute = this.doubleQoute ? '"' : "'";
+    this.loadAsync = typeof options.loadAsync === 'boolean' ? options.loadAsync : false;
   }
 
   apply(compiler) {
